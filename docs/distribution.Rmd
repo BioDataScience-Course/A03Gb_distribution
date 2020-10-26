@@ -1,5 +1,5 @@
 ---
-title: "Exercices pratiques module 3 : distribution"
+title: "Analyses graphique d'analyse d'image du zooplancton de Tulear (Madagascar)"
 author: "..."
 date: "..."
 output: html_document
@@ -9,11 +9,16 @@ output: html_document
 SciViews::R
 ```
 
-# Visualisation 
+# Objectif
 
-> Importez le jeu de données `zooplankton` depuis le package `data.io` et assignez le à `zooplankton`. 
+Ce document propose une analyse graphique du jeu de données `zooplankton` qui provient du package `data.io`
 
-<!-- RC : Cette étape est réalisée pour vous ci-dessous -->
+# Analyses graphique
+
+<!--- 
+Importez le jeu de données `zooplankton` depuis le package `data.io` et assignez le à `zooplankton`. 
+Cette étape est réalisée pour vous ci-dessous 
+--->
 
 ```{r importation}
 # Importation du jeu de données
@@ -21,13 +26,19 @@ zooplankton <- read(file = "zooplankton", package = "data.io", lang = "fr")
 names(zooplankton)
 ```
 
-> Réalisez quatres histogrammes pour visualiser la distribution du diamètre du cercle équivalent (`ecd`) en utilisant les découpages suivants : 10, 25, 40 et 55. 
+<!--- Consignes
+Réalisez quatres histogrammes pour visualiser la distribution du diamètre du cercle équivalent (`ecd`) en utilisant les nombres de classes suivantes suivantes : 10, 25, 40 et 55.
+
+bonus : n'hésitez pas à essayer de combiner ces 4 graphiques en graphique multiple avec la fonction combine_chart()
+--->
 
 ```{r histo1a}
 
 ```
 
-> Parmis les 4 graphiques précédants, sélectionnez celui que vous jugez le plus pertinant et commentez le en maximum 3 phrases. Modifiez le nom de l'axe des ordonnées (count --> Effectifs).
+<!--- Consignes
+Parmi les 4 graphiques précédents, sélectionnez celui que vous jugez le plus pertinent et commentez le en maximum 3 phrases. Modifiez le nom de l'axe des ordonnées (count --> Effectifs).
+--->
 
 
 ```{r histo1b}
@@ -35,41 +46,52 @@ names(zooplankton)
 
 ```
 
-> Réaliser un graphique de densité pour visualiser la distribution du périmètre (`perimeter`) et commentez-le en 5 phrases maximum.  
+<!--- Consignes
+Réaliser à présent un graphique de densité pour visualiser la distribution du périmètre (`perimeter`) et commentez-le en 5 phrases maximum.
+--->
 
 ```{r density}
 
 ```
 
-> Réalisez un diagramme en violon de l'aire (`area`) par classe (`class`) avec de la couleur pour chaque classe. Assurez-vous que la légende ne soit pas visible sur le graphique et que les classes soient lisibles. Commentez celui-ci en maximum 5 phrases. 
+<!--- Consignes
+Réalisez un diagramme en violon de l'aire (`area`) par classe (`class`) avec de la couleur pour chaque classe. Assurez-vous que la légende ne soit pas visible sur le graphique et que les classes soient lisibles. Commentez celui-ci en maximum 5 phrases. 
+--->
 
 ```{r violin}
 
 ```
 
-> Reproduisez le même graphique que le précédant mais cette fois-ci en utilisant la fonction `geom_density_ridges()` du packages `ggridges`. Commentez celui-ci en maximum 5 phrases. 
+<!--- Consinges
+Reproduisez le même graphique que le précédant mais cette fois-ci en utilisant la fonction `geom_density_ridges()` du packages `ggridges`. Commentez celui-ci en maximum 5 phrases. 
+--->
 
 ```{r density_ridges}
 library(ggridges)
  
 ```
 
-> A partir du jeu de données `zooplakton`, créez `zooplakton_sub` qui ne contiendra que les classes suivantes : "Poecilostomatoid", "Calanoid", "Cyclopoid", "Harpacticoid". 
-
-<!-- RC : Cette étape est réalisée pour vous ci-dessous -->
+<!---
+A partir du jeu de données `zooplakton`, créez `zooplakton_sub` qui ne contiendra que les classes suivantes : "Poecilostomatoid", "Calanoid", "Cyclopoid", "Harpacticoid". 
+Cette étape est réalisée pour vous ci-dessous 
+--->
 
 ```{r zoo_sub}
 # Réduction du jeu de données zooplankton
 zooplankton_sub <- filter(zooplankton, class %in% c("Poecilostomatoid", "Calanoid", "Cyclopoid", "Harpacticoid"))
 ```
 
-> En utilisant le jeu de données `zooplakton_sub`, réalisez un histogramme pour visualiser le diamètre de feret (`feret`) en utilisant un découpage de 25. Créez un graphique en facette en utilisant la classe (`class`). Pour chaque classe, l'histogramme doit être présentée sur un histogramme grisé représentant l'ensemble des données. Modifiez le nom de l'axe des ordonnées (count --> Effectifs) et masquez la légende. Finalement, commentez votre graphique en maximum 5 phrases. 
+<!--- Consignes
+En utilisant le jeu de données `zooplakton_sub`, réalisez un histogramme pour visualiser le diamètre de feret (`feret`) en utilisant un découpage de 25. Créez un graphique en facette en utilisant la classe (`class`). Pour chaque classe, l'histogramme doit être présentée sur un histogramme grisé représentant l'ensemble des données. Modifiez le nom de l'axe des ordonnées (count --> Effectifs) et masquez la légende. Finalement, commentez votre graphique en maximum 5 phrases. 
+--->
 
 ```{r histo_fact}
 
 ```
 
-> C'est maintenant à vous de jouez. A partir des `19 variables` du jeu de données `zooplacton_sub`, réalisez et commentez deux nouveaux graphiques permettant d'analyser la distribution d'une variable. Utilisez deux géométries différente et une variable facteur dans au moins un des deux graphiques. 
+<!--- Consinges
+C'est maintenant à vous de jouez. A partir des `19 variables` du jeu de données `zooplacton_sub`, réalisez et commentez deux nouveaux graphiques permettant d'analyser la distribution d'une variable. Utilisez deux géométries différente et une variable facteur dans au moins un des deux graphiques. 
+--->
 
 ```{r distrib1}
 
