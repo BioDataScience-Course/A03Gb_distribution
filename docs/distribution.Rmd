@@ -1,5 +1,5 @@
 ---
-title: "Analyses graphique d'analyse d'image du zooplancton de Tulear (Madagascar)"
+title: "Carnet de notes de l'analyse d'image du zooplancton de Tulear (Madagascar)"
 author: "..."
 date: "..."
 output: html_document
@@ -13,7 +13,7 @@ SciViews::R
 
 Ce document propose une analyse graphique du jeu de données `zooplankton` qui provient du package `data.io`
 
-# Analyses graphique
+# Analyses graphiques
 
 <!--- 
 Importez le jeu de données `zooplankton` depuis le package `data.io` et assignez le à `zooplankton`. 
